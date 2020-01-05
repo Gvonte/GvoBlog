@@ -19,5 +19,10 @@ const Advertise = sequelize.define("Advertise", {
         }
     }
 });
-Advertise.sync();
+Advertise.sync().then(() => {
+    Advertise.create({
+        title: 'GitHub',
+        link: 'https://github.com/Gvonte',
+    })
+});
 module.exports = Advertise;
