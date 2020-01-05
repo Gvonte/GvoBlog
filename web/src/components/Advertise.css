@@ -1,0 +1,33 @@
+.advertise-container .card-title {
+    color: #2e8aed;
+    font-size: 22px;
+}
+
+.advertise-container .card {
+    margin-bottom: 30px;
+    border-radius: 5px
+}
+
+.advertise-container .link-container {
+    margin: 10px 0;
+    position: relative
+}
+
+.advertise-container .link {
+    display: inline-block;
+    width: 100%;
+    color: #657180;
+    font-size: 12px
+}
+
+.advertise-container .link:hover {
+    color: #2e8aed;
+}
+
+.advertise-container .arrow {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    font-size: 10px;
+    color: rgb(219, 219, 219)
+}

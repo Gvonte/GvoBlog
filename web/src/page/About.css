@@ -1,0 +1,38 @@
+.page-about-container {
+    margin: 17px auto;
+    max-width: 1000px;
+    /* 让content内容撑开，因为父元素不是固定高度，所以不能用height:100%撑开，只能父元素display:flex */
+    /* flex: auto; */
+    background-color: white;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.page-about-container .img {
+    display: inline-block;
+    margin: 50px 0 20px;
+    width: 200px;
+    height: 63px;
+    background: url("../assets/images/brand.png");
+    background-size: 100%;
+}
+
+.page-about-container p {
+    margin: 10px 0;
+    padding: 0 43px;
+    text-align: left;
+    text-indent: 2em;
+    color: #666;
+    font-size: 16px;
+}
+
+.page-about-container p.first-p {
+    line-height: 40px;
+    padding-bottom: 18px;
+}
+
+.page-about-container p.last-p {
+    margin-top: 18px;
+    padding-bottom: 40px;
+    text-indent: 0;
+}

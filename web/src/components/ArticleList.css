@@ -1,0 +1,47 @@
+.articlelist-container {
+    border-top: 1px solid #e8e8e8;
+    overflow: auto;
+}
+
+.articlelist-container .article-list-item {
+    position: relative;
+    padding: 24px;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.articlelist-container .article-list-item:hover {
+    background-color: rgb(246, 246, 246);
+}
+
+.articlelist-container .article-list-item:hover h1 {
+    color: rgb(45, 140, 240);
+}
+
+.articlelist-container .article-list-item img {
+    float: right;
+    width: 72px;
+    height: 72px;
+}
+
+.articlelist-container .article-list-item h1 {
+    font-size: 19px;
+    color: #17233D;
+    transition: color 0.5s;
+}
+
+.articlelist-container .article-list-item p {
+    margin: 14px 0 17px;
+    font-size: 13px;
+    color: #808695;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.articlelist-container .demo-loading-container {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}

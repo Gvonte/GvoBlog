@@ -1,0 +1,17 @@
+.home-header {
+    background-color: white;
+}
+
+.home-content {
+    display: flex;
+    /* 响应式，在视窗缩小的时候，保证左右两边50像素的距离，header和footer内置了padding:50，所以这里我手动加上 */
+    padding: 0 50px;
+    background-color: rgb(240, 240, 240);
+}
+
+.home-footer {
+    text-align: center;
+    white-space: nowrap;
+    background-color: #262626;
+    color: white;
+}

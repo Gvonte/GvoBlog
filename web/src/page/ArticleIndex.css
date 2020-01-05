@@ -1,0 +1,51 @@
+.articleindex-container {
+    border-radius: 5px;
+    background-color: white;
+}
+
+.articleindex-container .tag-container {
+    padding: 10px 20px;
+}
+
+.articleindex-container .tag {
+    margin: 5px 3px;
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* 为什么after后的内容先hover再是前面的内容hover，而不是同步的 */
+
+.articleindex-container .tag.extend:hover:after {
+    border-top: 5px solid rgb(59, 161, 255);
+}
+
+.articleindex-container .tag.reduce:hover:after {
+    border-bottom: 5px solid rgb(59, 161, 255);
+}
+
+.articleindex-container .extend:after {
+    position: relative;
+    left: 3px;
+    top: 10px;
+    content: "";
+    height: 5px;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(0, 0, 0, 0.65);
+}
+
+.articleindex-container .reduce:after {
+    position: relative;
+    left: 3px;
+    bottom: 11px;
+    content: "";
+    height: 5px;
+    width: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.65);
+}
