@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const globalInit = () => {
-    axios.defaults.baseURL = 'http://localhost:3000/';
+    // axios.defaults.baseURL = 'http://localhost:3000/';
     axios.interceptors.request.use(config => {
         // 在发送请求之前做些什么
         const user_info = JSON.parse(localStorage.getItem('user_info'));
