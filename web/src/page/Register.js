@@ -20,7 +20,7 @@ const Login = connect(null, {
                     history.push('/login');
                 }).catch(err => {
                     // 注册失败
-                    message.error(err.respone.data.msg);
+                    message.error(err.response.data.msg);
                 })
             }
         });
