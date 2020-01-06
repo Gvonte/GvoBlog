@@ -45,9 +45,9 @@
 }
 
 .header-container .icon.logout::after {
-    content: " 注销";
+    content: "\0020\6ce8\9500";
 }
 
 .header-container .icon.login::after {
-    content: " 登录";
+    content: "\0020\767b\5f55";
 }
