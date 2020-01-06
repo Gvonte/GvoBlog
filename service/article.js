@@ -12,6 +12,7 @@ const getListAll = async page => {
         articles = await Article.findAndCountAll({
             offset: (page - 1) * PAGE_SIZE,
             limit: PAGE_SIZE,
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             include: [{
                 model: Category,
                 attributes: ['name']
@@ -19,6 +20,7 @@ const getListAll = async page => {
         });
     } else {
         articles = await Article.findAndCountAll({
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             include: [{
                 model: Category,
                 attributes: ['name']
@@ -33,6 +35,7 @@ const getListByCategory = async (CategoryId, page) => {
     if (page) {
         articles = await Article.findAndCountAll({
             where: { CategoryId },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             offset: (page - 1) * PAGE_SIZE,
             limit: PAGE_SIZE,
             include: [{
@@ -43,6 +46,7 @@ const getListByCategory = async (CategoryId, page) => {
     } else {
         articles = await Article.findAndCountAll({
             where: { CategoryId },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             include: [{
                 model: Category,
                 attributes: ['name']
@@ -59,6 +63,7 @@ const getListByKey = async (key, page) => {
             where: {
                 [Op.or]: [{ title: { [Op.like]: `%${key}%` } }, { keyword: { [Op.like]: `%${key}%` } }]
             },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             offset: (page - 1) * PAGE_SIZE,
             limit: PAGE_SIZE,
             include: [{
@@ -71,6 +76,7 @@ const getListByKey = async (key, page) => {
             where: {
                 [Op.or]: [{ title: { [Op.like]: `%${key}%` } }, { keyword: { [Op.like]: `%${key}%` } }]
             },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             include: [{
                 model: Category,
                 attributes: ['name']
@@ -88,6 +94,7 @@ const getListByCategoryAndKey = async (CategoryId, key, page) => {
                 CategoryId,
                 [Op.or]: [{ title: { [Op.like]: `%${key}%` } }, { keyword: { [Op.like]: `%${key}%` } }]
             },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             offset: (page - 1) * PAGE_SIZE,
             limit: PAGE_SIZE,
             include: [{
@@ -101,6 +108,7 @@ const getListByCategoryAndKey = async (CategoryId, key, page) => {
                 CategoryId,
                 [Op.or]: [{ title: { [Op.like]: `%${key}%` } }, { keyword: { [Op.like]: `%${key}%` } }]
             },
+            attributes: ['browse', 'cover', 'description', 'author', 'title', 'id'],
             include: [{
                 model: Category,
                 attributes: ['name']
