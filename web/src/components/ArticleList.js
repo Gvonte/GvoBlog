@@ -71,6 +71,16 @@ const ArticleList = connect(state => ({
             }, () => {
                 this.handleInfiniteOnLoad();
             });
+        } else if (this.props.k !== prevProps.k) {
+            // console.log("key改变");
+            setArticleList([]);
+            this.setState({
+                hasMore: true,
+                loading: false,
+                page: 1
+            }, () => {
+                this.handleInfiniteOnLoad();
+            });
         }
     }
     componentDidMount() {
