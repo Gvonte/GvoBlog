@@ -19,10 +19,11 @@ const Advertise = sequelize.define("Advertise", {
         }
     }
 });
-Advertise.sync().then(() => {
-    Advertise.create({
-        title: 'GitHub',
-        link: 'https://github.com/Gvonte',
-    })
-});
+// Advertise.sync().then(() => {
+//     Advertise.create({
+//         title: 'GitHub',
+//         link: 'https://github.com/Gvonte',
+//     })
+// });
+Advertise.sync();
 module.exports = Advertise;

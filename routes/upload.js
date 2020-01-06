@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const router = new Router({ prefix: "/upload" });
+const router = new Router({ prefix: "/api/upload" });
 const uploadController = require("../controller/upload");
 const jwtAuth = require("koa-jwt");
 const secret = require("../utils/tokenSecret");

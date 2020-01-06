@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const router = new Router({ prefix: "/reply" });
+const router = new Router({ prefix: "/api/reply" });
 const replyController = require("../controller/reply");
 const jwtAuth = require("koa-jwt");
 const secret = require("../utils/tokenSecret");
