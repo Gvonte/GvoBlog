@@ -1,7 +1,6 @@
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("gvoblog", "root", "admin", {
+const sequelize = new Sequelize("gvoblog", "root", "root", {
     host: "localhost",
-    dialect: "mysql",
-    operatorsAliases: false
+    dialect: "mysql"
 });
 module.exports = sequelize;
