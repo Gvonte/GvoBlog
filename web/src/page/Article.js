@@ -10,19 +10,17 @@ import ArticleId from './ArticleId'
 function Article() {
     return (
         <div className="page-article-container">
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                <Col span={18}>
-                    <Switch>
-                        <Route exact path="/" component={ArticleIndex} />
-                        <Route exact path="/article" component={ArticleIndex} />
-                        <Route path="/article/create" component={ArticleCreate} />
-                        <Route path="/article/:id" component={ArticleId} />
-                    </Switch>
-                </Col>
-                <Col span={6}>
-                    <Advertise />
-                </Col>
-            </Row>
+            <div className="left-container">
+                <Switch>
+                    <Route exact path="/" component={ArticleIndex} />
+                    <Route exact path="/article" component={ArticleIndex} />
+                    <Route path="/article/create" component={ArticleCreate} />
+                    <Route path="/article/:id" component={ArticleId} />
+                </Switch>
+            </div>
+            <div className="right-container">
+                <Advertise />
+            </div>
         </div>
     )
 }

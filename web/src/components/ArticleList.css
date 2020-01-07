@@ -45,3 +45,12 @@
     width: 100%;
     text-align: center;
 }
+
+@media screen and (max-width:414px) {
+    .articlelist-container .article-list-item img {
+        display: none;
+    }
+    .articlelist-container .article-list-item h1 {
+        font-size: 17px;
+    }
+}

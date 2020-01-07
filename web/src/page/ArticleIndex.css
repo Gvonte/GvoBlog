@@ -15,9 +15,6 @@
     cursor: pointer;
 }
 
-
-/* 为什么after后的内容先hover再是前面的内容hover，而不是同步的 */
-
 .articleindex-container .tag.extend:hover:after {
     border-top: 5px solid rgb(59, 161, 255);
 }
@@ -36,6 +33,7 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 5px solid rgba(0, 0, 0, 0.65);
+    transition: all 0.3s;
 }
 
 .articleindex-container .reduce:after {
@@ -48,4 +46,5 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-bottom: 5px solid rgba(0, 0, 0, 0.65);
+    transition: all 0.3s;
 }

@@ -4,6 +4,7 @@
     height: 100%;
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
 }
 
 .header-container .left {
@@ -12,7 +13,6 @@
 }
 
 .header-container .brand {
-    display: inline-block;
     width: 128px;
     background: url("../assets/images/brand.png") no-repeat;
     background-position: center;
@@ -22,7 +22,6 @@
 }
 
 .header-container .menu {
-    display: inline-block;
     margin-left: 10px;
     border-bottom: 0;
     align-self: center;
@@ -33,21 +32,43 @@
     font-size: 16px;
 }
 
+.header-container .right {
+    display: flex;
+    align-items: center;
+}
+
 .header-container .btn {
     margin: 0 30px;
 }
 
 .header-container .icon {
+    flex: none;
     margin-left: -5px;
     color: #1890ff;
     cursor: pointer;
     font-size: 16px;
 }
 
-.header-container .icon.logout::after {
-    content: "\0020\6ce8\9500";
-}
-
-.header-container .icon.login::after {
-    content: "\0020\767b\5f55";
+@media screen and (max-width:414px) {
+    .header-container {
+        justify-content: space-around;
+    }
+    .header-container .brand {
+        width: 60px;
+    }
+    .header-container .menu {
+        margin-left: 0;
+    }
+    .header-container .menu .menu-item {
+        position: relative;
+        top: -1px;
+        padding: 0 10px;
+        font-size: 14px;
+    }
+    .header-container .btn {
+        display: none;
+    }
+    .header-container .icon {
+        display: none;
+    }
 }

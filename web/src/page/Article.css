@@ -1,5 +1,30 @@
 .page-article-container {
+    display: flex;
     margin: 17px auto;
+    /* 响应式，在视窗缩小的时候，保证左右两边50像素的距离，header和footer内置了padding:50，所以这里我手动加上 */
+    padding: 0 50px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
+}
+
+.page-article-container .left-container {
+    flex: 1;
+    overflow: hidden;
+    flex-grow: 3;
+}
+
+.page-article-container .right-container {
+    margin-left: 24px;
+    flex: 1;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+@media screen and (max-width:414px) {
+    .page-article-container {
+        padding: 0;
+    }
+    .page-article-container .right-container {
+        display: none;
+    }
 }

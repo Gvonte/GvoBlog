@@ -44,7 +44,7 @@ const GHeader = connect(state => ({
                     })}
                 </Menu>
             </div>
-            <div>
+            <div className="right">
                 <Search
                     placeholder="搜索你想阅读的文章..."
                     onSearch={handleSubmit}
@@ -53,9 +53,9 @@ const GHeader = connect(state => ({
                 <Button type="primary" className="btn" onClick={() => { history.push('/article/create') }}>写博客</Button>
                 {
                     userInfo.token ?
-                        <Icon type="logout" onClick={logout} className="icon logout" />
+                        <span onClick={logout} className="icon" ><Icon type="logout" /> 注销</span>
                         :
-                        <Icon type="login" className="icon login" onClick={() => { history.push('/login') }} />
+                        <span className="icon" onClick={() => { history.push('/login') }}><Icon type="login" /> 登录</span>
 
                 }
             </div>

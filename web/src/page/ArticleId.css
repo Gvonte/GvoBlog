@@ -29,6 +29,7 @@
 
 .articleid-container .content {
     margin-bottom: 38px;
+    overflow-x: auto;
 }
 
 .articleid-container .content h1,
@@ -68,4 +69,13 @@
 
 .articleid-container .comment-container {
     margin: -32px 0;
+}
+
+@media screen and (max-width:414px) {
+    .articleid-container {
+        padding: 23px 10px;
+    }
+    .articleid-container .title {
+        font-size: 24px;
+    }
 }
