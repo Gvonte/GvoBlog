@@ -5,6 +5,8 @@ import { Redirect } from 'react-router-dom'
 import './ArticleCreate.css'
 import { Form, Input, Button, Icon, Upload, message, AutoComplete } from 'antd'
 import uploadFile from '../service/uploadFile'
+import uploadImg from '../service/uploadImg'
+
 import createArticle from '../service/createArticle'
 
 const ArticleCreate = connect(state => ({
@@ -31,7 +33,7 @@ const ArticleCreate = connect(state => ({
         }, [category.length, getCategory]);
         const handleSubmit = async e => {
             e.preventDefault();
-            validateFields((err, values) => {
+            validateFields((err, values) => {                
                 let { title, description, CategoryId, content } = values;
                 if (!err) {
                     CategoryId = category.find(item => item.name === CategoryId).id;
@@ -45,7 +47,7 @@ const ArticleCreate = connect(state => ({
                 }
             });
         };
-        const onSearch = (searchText) => {         
+        const onSearch = (searchText) => {
             const data = category.map(item => item.name);
             if (!searchText) {
                 setDatasource(data);
@@ -116,6 +118,20 @@ const ArticleCreate = connect(state => ({
                         </Button>
                         </Upload>
                     )}
+                </Form.Item>
+                <Form.Item label="传图片">
+                    <Upload
+                        name='img'
+                        customRequest={options => {
+                            uploadImg(options.file).then(res => {
+                                options.onSuccess(res.data.data);
+                            });
+                        }}
+                    >
+                        <Button >
+                            <Icon type="upload" />上传图片
+                        </Button>
+                    </Upload>
                 </Form.Item>
                 <Form.Item>
                     <Button type="primary" htmlType="submit" className="btn">新建博客</Button>
