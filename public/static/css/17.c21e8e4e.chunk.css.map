@@ -1,0 +1,1 @@
+{"version":3,"sources":["ArticleCreate.css"],"names":[],"mappings":"AAAA,yBACI,sBAAuB,CACvB,iBAAkB,CAClB,qBACJ","file":"17.c21e8e4e.chunk.css","sourcesContent":[".articlecreate-container {\r\n    padding: 23px 30px 10px;\r\n    border-radius: 5px;\r\n    background-color: white;\r\n}"]}

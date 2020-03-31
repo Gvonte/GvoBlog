@@ -7,6 +7,10 @@
     overflow-x: auto;
 }
 
+.header-container::-webkit-scrollbar {
+    /* display: none; */
+}
+
 .header-container .left {
     display: flex;
     font-size: 0;

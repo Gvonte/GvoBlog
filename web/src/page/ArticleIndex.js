@@ -22,14 +22,14 @@ const ArticleIndex = connect(state => ({
     curTag = curTag ? Number(curTag[1]) : 0; //当前选中的分类的id
     const [showTags, setShowTags] = useState([]); //当前展示的分类有哪些
     useEffect(() => {
-        if (tags.length === 0) {
-            getCategory().then(res => {
-                setShowTags(res.data.data.slice(0, 8));
-            })
-        } else {
-            setShowTags(tags.slice(0, 8));
-        }
-    }, [getCategory, tags]);
+        // if (tags.length === 0) {
+        getCategory().then(res => {
+            setShowTags(res.data.data.slice(0, 8));
+        })
+        // } else {
+        // setShowTags(tags.slice(0, 8));
+        // }
+    }, [getCategory]);
     const extend = () => {
         setShowTags(tags);
     }
@@ -66,11 +66,11 @@ const ArticleIndex = connect(state => ({
                 >
                     展开
                 </CheckableTag>) : (<CheckableTag
-                        key={-2}
-                        className={["reduce", "tag"]}
-                        onChange={reduce}
-                    >
-                        收起
+                    key={-2}
+                    className={["reduce", "tag"]}
+                    onChange={reduce}
+                >
+                    收起
                 </CheckableTag>)}
             </div>
             <ArticleList category={curTag} k={key} />

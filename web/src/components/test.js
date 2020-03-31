@@ -26,19 +26,19 @@ export default function (props) {
             ...lastState,
             loading: true
         }));
-        setTimeout(() => {
-            console.log("请求成功");
-            setState(lastState => {
-                console.log(lastState);
-                return {
-                    hasMore: false,
-                    loading: false,
-                    page: lastState.page + 1,
-                    articleList: ['test'],
-                };
+        // setTimeout(() => {
+        //     console.log("请求成功");
+        //     setState(lastState => {
+        //         console.log(lastState);
+        //         return {
+        //             hasMore: false,
+        //             loading: false,
+        //             page: lastState.page + 1,
+        //             articleList: ['test'],
+        //         };
 
-            })
-        }, 1000);
+        //     })
+        // }, 1000);
     };
     useEffect(() => {
         console.log("id改变");

@@ -88,7 +88,7 @@ const ArticleCreate = connect(state => ({
                             }
                         ]
                     })(
-                        <AutoComplete dataSource={datasource} onSearch={onSearch}>
+                        <AutoComplete dataSource={datasource} onSearch={onSearch} onFocus={onSearch}>
                             <Input className="input" />
                         </AutoComplete>
                     )}

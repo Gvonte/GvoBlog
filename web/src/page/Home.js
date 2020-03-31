@@ -1,21 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Layout, BackTop } from 'antd';
-import Article from './Article'
-import About from './About'
 import GHeader from '../components/GHeader'
 import './Home.css'
+
+const Article = React.lazy(() => import('./Article'));
+const About = React.lazy(() => import('./About'));
 
 const { Header, Footer, Content } = Layout;
 
 function Home() {
-  const [h, setH] = useState(document.documentElement.clientHeight || document.body.clientHeight);
-  window.onresize = () => {
-    setH(document.documentElement.clientHeight || document.body.clientHeight)
-  };
   return (
     <div>
-      <Layout style={{ minHeight: h }}>
+      <Layout style={{ minHeight: '100vh' }}>
         <BackTop />
         <Header className="home-header"><GHeader /></Header>
         <Content className="home-content">

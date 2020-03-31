@@ -20,7 +20,8 @@ const ArticleList = connect(state => ({
      */
     constructor(props) {
         super(props);
-        // console.log("刷新", id, state, articleList);
+        // const { category: id, articleList, k } = this.props;
+        // console.log("刷新", id, articleList, k);
         this.state = {
             hasMore: true,
             loading: false,
@@ -60,6 +61,8 @@ const ArticleList = connect(state => ({
     };
     // 因为props中的page，和控制分页加载数据的state都会导致组件刷新，所以需要对id单独判断，如果是id变量改变，即分类改变了，则应该将articleList等数据恢复初值
     componentDidUpdate(prevProps) {
+        // const { category: id, articleList, k } = this.props;
+        // console.log("刷新", id, articleList, k);
         const { setArticleList } = this.props;
         if (this.props.category !== prevProps.category) {
             // console.log("id改变");
@@ -88,7 +91,7 @@ const ArticleList = connect(state => ({
         this.handleInfiniteOnLoad();
     }
     componentWillUnmount() {
-        const { setArticleList } = this.props;
+        const { setArticleList } = this.props;        
         setArticleList([]);
     }
 

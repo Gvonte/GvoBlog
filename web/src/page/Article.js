@@ -1,11 +1,11 @@
 import React from "react";
 import './Article.css'
 import { Route, Switch } from 'react-router-dom'
-import { Row, Col } from 'antd';
 import Advertise from '../components/Advertise'
-import ArticleIndex from './ArticleIndex'
-import ArticleCreate from './ArticleCreate'
-import ArticleId from './ArticleId'
+
+const ArticleIndex = React.lazy(() => import('./ArticleIndex'))
+const ArticleCreate = React.lazy(() => import('./ArticleCreate'))
+const ArticleId = React.lazy(() => import('./ArticleId'))
 
 function Article() {
     return (

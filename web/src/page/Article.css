@@ -8,16 +8,14 @@
 }
 
 .page-article-container .left-container {
-    flex: 1;
+    flex: 3 1 0;
     overflow: hidden;
-    flex-grow: 3;
 }
 
 .page-article-container .right-container {
     margin-left: 24px;
-    flex: 1;
+    flex: 1 1 0;
     overflow: hidden;
-    flex-grow: 1;
 }
 
 @media screen and (max-width:414px) {
