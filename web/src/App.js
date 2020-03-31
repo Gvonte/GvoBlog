@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css'
 import { Spin } from 'antd';
 
 const Home = React.lazy(() => import('./page/Home'))
@@ -9,8 +8,13 @@ const Login = React.lazy(() => import('./page/Login'))
 
 function App() {
   return (
-    <div className="app-container">
-      <Suspense fallback={<div class="middle"><Spin /></div>}>
+    <div>
+      <Suspense fallback={<div style={{
+        display: 'flex',
+        height: '100vh',
+        justifyContent: 'center',
+        alignItems: 'center'
+      }}><Spin /></div>}>
         <Switch>
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
