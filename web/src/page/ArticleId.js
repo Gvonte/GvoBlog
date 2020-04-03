@@ -38,7 +38,10 @@ const ArticleId = connect(state => ({
 })(function (props) {
     const { match: { params: { id } }, article, getArticle, history } = props;
     useEffect(() => {
-        getArticle(id);
+        getArticle(id).then(res=>{
+            console.log(res.data.data.article.content.slice(0,2000));
+            
+        });
     }, [getArticle, id]);
     const [comment, setComment] = useState('')
     const onChange = (e) => {
